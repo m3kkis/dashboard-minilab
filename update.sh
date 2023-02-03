@@ -1,4 +1,4 @@
 #!/bin/sh
 git pull
-npm start build
+npm run build
 sudo service nginx restart
