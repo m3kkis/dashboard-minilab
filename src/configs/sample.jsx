@@ -1,6 +1,6 @@
 //Grab icons from https://tabler-icons.io/
 
-import { IconServer, IconBookmark } from '@tabler/icons-react';
+import { IconServer, IconBookmark, IconBrandUbuntu } from '@tabler/icons-react';
 
 export const DataStructure = () => ({
   self_hosted: [
@@ -21,6 +21,13 @@ export const DataStructure = () => ({
           ip: '',
           port: '',
           url: '',
+        },
+      ],
+      vms: [
+        {
+          icon: IconBrandUbuntu,
+          name: '',
+          ip: '',
         },
       ],
     },

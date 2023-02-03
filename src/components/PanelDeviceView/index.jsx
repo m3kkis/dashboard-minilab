@@ -1,5 +1,7 @@
 import { Paper, Title, Text, Group } from '@mantine/core';
+
 import AccordionApps from './AccordionApps';
+import GridVms from './GridVms';
 
 import { IconServer } from '@tabler/icons-react';
 
@@ -27,7 +29,18 @@ function PanelDeviceView({ device }) {
           </Text>
         </Group>
       </Paper>
+      <Text mt={16} c="dimmed" tt="uppercase" fs="italic" fz="xs">
+        Applications
+      </Text>
       <AccordionApps apps={device.hosting} />
+      {device.vms && device.vms.length > 0 && (
+        <>
+          <Text my={16} c="dimmed" tt="uppercase" fs="italic" fz="xs">
+            Virtual Machines
+          </Text>
+          <GridVms vms={device.vms} />
+        </>
+      )}
     </>
   );
 }
