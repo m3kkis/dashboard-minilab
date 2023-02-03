@@ -1,4 +1,4 @@
 #!/bin/sh
 git pull
 npm run build
-sudo service nginx restart
+service nginx restart
