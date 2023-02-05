@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import {
   Accordion,
@@ -63,4 +64,18 @@ function AccordionApps({ apps }) {
     </Accordion>
   );
 }
+
+AccordionApps.propTypes = {
+  apps: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.elementType,
+      color: PropTypes.string,
+      name: PropTypes.string,
+      ip: PropTypes.string,
+      port: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ),
+};
+
 export default AccordionApps;

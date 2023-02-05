@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Paper, Text, Group, Stack, SimpleGrid } from '@mantine/core';
 
 function GridVms({ vms }) {
@@ -23,4 +24,15 @@ function GridVms({ vms }) {
     </SimpleGrid>
   );
 }
+
+GridVms.propTypes = {
+  vms: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.elementType,
+      name: PropTypes.string,
+      ip: PropTypes.string,
+    })
+  ),
+};
+
 export default GridVms;

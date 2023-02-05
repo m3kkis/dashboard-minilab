@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { createStyles, Text, SimpleGrid, UnstyledButton } from '@mantine/core';
 
 const useStyles = createStyles(theme => ({
@@ -48,5 +49,16 @@ function PanelBookmarksView({ bookmarks }) {
     </SimpleGrid>
   );
 }
+
+PanelBookmarksView.propTypes = {
+  bookmarks: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.elementType,
+      color: PropTypes.string,
+      name: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ),
+};
 
 export default PanelBookmarksView;

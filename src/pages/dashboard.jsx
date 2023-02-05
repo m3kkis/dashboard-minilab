@@ -48,8 +48,8 @@ export default function PageDashboard() {
             <PanelAllView data={{ ...DataStructure() }} />
           </Tabs.Panel>
           {{ ...DataStructure() }?.self_hosted?.map((device, i) => (
-            <Tabs.Panel value={device.name} pt={16}>
-              <PanelDeviceView key={`device${i}`} device={device} />
+            <Tabs.Panel key={`device${i}`} value={device.name} pt={16}>
+              <PanelDeviceView device={device} />
             </Tabs.Panel>
           ))}
           <Tabs.Panel value="bookmarks" pt={16}>

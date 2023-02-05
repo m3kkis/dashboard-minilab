@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Title } from '@mantine/core';
 
 import GridSelfHosted from './GridSelfHosted';
@@ -42,5 +44,12 @@ function PanelAllView({ data }) {
     </>
   );
 }
+
+PanelAllView.propTypes = {
+  data: PropTypes.shape({
+    self_hosted: PropTypes.array,
+    bookmarks: PropTypes.array,
+  }),
+};
 
 export default PanelAllView;

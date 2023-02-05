@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Paper, Title, Text, Group } from '@mantine/core';
 
 import AccordionApps from './AccordionApps';
@@ -53,4 +54,21 @@ function PanelDeviceView({ device }) {
     </>
   );
 }
+
+PanelDeviceView.propTypes = {
+  device: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.shape({
+      cpu: PropTypes.string,
+      memory: PropTypes.string,
+      storage: PropTypes.string,
+      os: PropTypes.string,
+    }),
+    ip: PropTypes.string,
+    hosting: PropTypes.array,
+    vms: PropTypes.array,
+    lxcs: PropTypes.array,
+  }),
+};
+
 export default PanelDeviceView;
